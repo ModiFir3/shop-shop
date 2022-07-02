@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- cdn for stripe library -->
+    <script src="https://js.stripe.com/v3/"></script>
+
+    <script>
+      // use client-side test api key
+      var stripe = Stripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
+
+      // immediately redirect to stripe using your checkout session
+      stripe.redirectToCheckout({
+        sessionId:
+          //test id we got from command line
+          "cs_test_a1I9lTrmHf6uAcr68eJ7WtU1UAVTIRcR6I4icMeR1XGkkGEFmDzZdI9CYw",
+      });
+    </script>
+  </body>
+</html>
